@@ -272,6 +272,7 @@ const routeTree = rootRoute.addChildren([
 
 export const router = createRouter({
   routeTree,
+  basepath: "/app", // Caddy reverse-proxies at /app/* — all SPA routes must be prefixed
   defaultPreload: "intent", // Preload on hover/focus
   defaultPreloadStaleTime: 0,
 });
